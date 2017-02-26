@@ -17,7 +17,7 @@
 		8FECC7AF1E5D6B4200F7F771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FECC7AD1E5D6B4200F7F771 /* LaunchScreen.storyboard */; };
 		8FECC7B41E5D6B5C00F7F771 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECC7841E5D6B2A00F7F771 /* Card.framework */; };
 		8FECC7B51E5D6B5C00F7F771 /* Card.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECC7841E5D6B2A00F7F771 /* Card.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8FECC8401E6321D100F7F771 /* DoubleSidedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC83F1E6321D100F7F771 /* DoubleSidedView.swift */; };
+		8FECC8401E6321D100F7F771 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC83F1E6321D100F7F771 /* CardView.swift */; };
 		8FECC8421E63274800F7F771 /* CALayer+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC8411E63274800F7F771 /* CALayer+Anchor.swift */; };
 		8FECC8441E632C5100F7F771 /* UIView+Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC8431E632C5100F7F771 /* UIView+Edge.swift */; };
 /* End PBXBuildFile section */
@@ -67,7 +67,7 @@
 		8FECC7AB1E5D6B4200F7F771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FECC7AE1E5D6B4200F7F771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FECC7B01E5D6B4200F7F771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FECC83F1E6321D100F7F771 /* DoubleSidedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleSidedView.swift; sourceTree = "<group>"; };
+		8FECC83F1E6321D100F7F771 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8FECC8411E63274800F7F771 /* CALayer+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Anchor.swift"; sourceTree = "<group>"; };
 		8FECC8431E632C5100F7F771 /* UIView+Edge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Edge.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,7 +125,7 @@
 				8FECC7871E5D6B2A00F7F771 /* Card.h */,
 				8FECC7881E5D6B2A00F7F771 /* Info.plist */,
 				8FECC8431E632C5100F7F771 /* UIView+Edge.swift */,
-				8FECC83F1E6321D100F7F771 /* DoubleSidedView.swift */,
+				8FECC83F1E6321D100F7F771 /* CardView.swift */,
 				8FECC8411E63274800F7F771 /* CALayer+Anchor.swift */,
 			);
 			path = Card;
@@ -304,7 +304,7 @@
 			files = (
 				8FECC8441E632C5100F7F771 /* UIView+Edge.swift in Sources */,
 				8FECC8421E63274800F7F771 /* CALayer+Anchor.swift in Sources */,
-				8FECC8401E6321D100F7F771 /* DoubleSidedView.swift in Sources */,
+				8FECC8401E6321D100F7F771 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
