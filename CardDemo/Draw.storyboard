@@ -23,18 +23,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If8-Cv-b0r">
-                                <rect key="frame" x="91" y="613" width="585" height="391"/>
+                                <rect key="frame" x="90.5" y="613.5" width="586" height="390.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfq-TK-XPJ">
-                                <rect key="frame" x="92" y="28" width="585" height="391"/>
+                                <rect key="frame" x="91.5" y="28" width="586" height="390.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xfq-TK-XPJ" secondAttribute="height" multiplier="3:2" id="P9y-uh-a9w"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Va5-du-xyG">
-                                <rect key="frame" x="92" y="419" width="585" height="195"/>
+                                <rect key="frame" x="91.5" y="418.5" width="586" height="195"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlJ-ck-0aD">
                                         <rect key="frame" x="20" y="82" width="50" height="30"/>
@@ -44,14 +44,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut8-Pm-ayK">
-                                        <rect key="frame" x="527" y="82" width="38" height="30"/>
+                                        <rect key="frame" x="528" y="82" width="38" height="30"/>
                                         <state key="normal" title="Undo"/>
                                         <connections>
                                             <action selector="handleUndoButton:" destination="s2P-4A-Vyr" eventType="touchUpInside" id="brN-OC-eTF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cN-eR-i8z">
-                                        <rect key="frame" x="274" y="82" width="36" height="30"/>
+                                        <rect key="frame" x="274.5" y="82" width="36" height="30"/>
                                         <state key="normal" title="Draw"/>
                                         <connections>
                                             <action selector="handleDrawButton:" destination="s2P-4A-Vyr" eventType="touchUpInside" id="hRB-vp-yQg"/>
@@ -73,7 +73,7 @@
                                 </constraints>
                             </view>
                             <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8m-7t-1GB" customClass="Card3DView" customModule="Card">
-                                <rect key="frame" x="91" y="29" width="585" height="390"/>
+                                <rect key="frame" x="90.5" y="28.5" width="586" height="390.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="W8m-7t-1GB" secondAttribute="height" multiplier="3:2" id="5Go-A2-eqf"/>

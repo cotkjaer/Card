@@ -14,11 +14,32 @@ import UIKit
 @IBDesignable
 open class TwoSidedImageView: UIImageView
 {
+    private var _frontImage: UIImage?
+    
     @IBInspectable
     open var frontImage: UIImage?
+    {
+        get { return _frontImage }
+        set
+        {
+            _frontImage = newValue
+            image = newValue
+        }
+    }
+    
+    
+    private var _backImage: UIImage?
     
     @IBInspectable
     open var backImage: UIImage?
+        {
+        get { return _backImage }
+        set
+        {
+            _backImage = newValue
+            image = newValue
+        }
+    }
     
     // MARK: - Flip
     
