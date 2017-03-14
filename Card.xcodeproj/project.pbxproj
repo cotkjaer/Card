@@ -13,6 +13,7 @@
 		8F2899D21E6464DA0083DFB2 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2899D11E6464DA0083DFB2 /* DrawViewController.swift */; };
 		8F2899D41E6475F90083DFB2 /* TwoSidedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2899D31E6475F80083DFB2 /* TwoSidedImageView.swift */; };
 		8F56A9B61E78092500B1F37C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56A9B51E78092500B1F37C /* CardView.swift */; };
+		8F56A9B81E780B7900B1F37C /* TwoSided3DImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56A9B71E780B7900B1F37C /* TwoSided3DImageView.swift */; };
 		8FECC78E1E5D6B2A00F7F771 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECC7841E5D6B2A00F7F771 /* Card.framework */; };
 		8FECC7931E5D6B2A00F7F771 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC7921E5D6B2A00F7F771 /* CardTests.swift */; };
 		8FECC7951E5D6B2A00F7F771 /* Card.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FECC7871E5D6B2A00F7F771 /* Card.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,6 +67,7 @@
 		8F2899D11E6464DA0083DFB2 /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 		8F2899D31E6475F80083DFB2 /* TwoSidedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSidedImageView.swift; sourceTree = "<group>"; };
 		8F56A9B51E78092500B1F37C /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		8F56A9B71E780B7900B1F37C /* TwoSided3DImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSided3DImageView.swift; sourceTree = "<group>"; };
 		8FECC7841E5D6B2A00F7F771 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FECC7871E5D6B2A00F7F771 /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		8FECC7881E5D6B2A00F7F771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,9 +138,10 @@
 			children = (
 				8FECC7871E5D6B2A00F7F771 /* Card.h */,
 				8FECC7881E5D6B2A00F7F771 /* Info.plist */,
-				8FECC83F1E6321D100F7F771 /* Card3DView.swift */,
-				8F56A9B51E78092500B1F37C /* CardView.swift */,
 				8F2899D31E6475F80083DFB2 /* TwoSidedImageView.swift */,
+				8F56A9B51E78092500B1F37C /* CardView.swift */,
+				8F56A9B71E780B7900B1F37C /* TwoSided3DImageView.swift */,
+				8FECC83F1E6321D100F7F771 /* Card3DView.swift */,
 				8FECC8411E63274800F7F771 /* CALayer+Anchor.swift */,
 				8FECC8451E634B0400F7F771 /* xor.swift */,
 			);
@@ -324,6 +327,7 @@
 			files = (
 				8FECC8461E634B0400F7F771 /* xor.swift in Sources */,
 				8FECC8421E63274800F7F771 /* CALayer+Anchor.swift in Sources */,
+				8F56A9B81E780B7900B1F37C /* TwoSided3DImageView.swift in Sources */,
 				8FECC8401E6321D100F7F771 /* Card3DView.swift in Sources */,
 				8F2899D41E6475F90083DFB2 /* TwoSidedImageView.swift in Sources */,
 				8F56A9B61E78092500B1F37C /* CardView.swift in Sources */,

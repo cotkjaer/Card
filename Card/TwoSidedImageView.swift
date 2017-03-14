@@ -8,138 +8,89 @@
 
 import UIKit
 
-open class TwoSidedImageView: UIView
+/**
+ View representing a two-sided image. It has two sides and can be flipped between them.
+ */
+@IBDesignable
+open class TwoSidedImageView: UIImageView
 {
-    let doubleSidedLayer = CATransformLayer()
-    
-    let topLayer = CALayer()
-    let bottomLayer = CALayer()
-    
-    // MARK: - Init
-    
-    override init(frame: CGRect)
-    {
-        super.init(frame: frame)
-        initialSetup()
-    }
-    
-    required public init?(coder aDecoder: NSCoder)
-    {
-        super.init(coder: aDecoder)
-        initialSetup()
-    }
-    
-    override open func awakeFromNib()
-    {
-        super.awakeFromNib()
-        initialSetup()
-    }
-    
-    func initialSetup()
-    {
-        backgroundColor = .clear
-        
-        topLayer.zPosition = 2
-        bottomLayer.zPosition = 1
-        
-        topLayer.isDoubleSided = false
-        bottomLayer.isDoubleSided = true
-        
-        layoutLayers()
-        
-        doubleSidedLayer.addSublayer(topLayer)
-        doubleSidedLayer.addSublayer(bottomLayer)
-        
-        layer.addSublayer(doubleSidedLayer)
-    }
-
-    func updatePerspective()
-    {
-        var perspective = CATransform3DIdentity
-        perspective.m34 = 0.5 / -max(bounds.width, bounds.height, 1)
-        doubleSidedLayer.transform = perspective
-    }
-    
-    func layoutLayers()
-    {
-        updatePerspective()
-        
-        doubleSidedLayer.frame = bounds
-        topLayer.frame = doubleSidedLayer.bounds
-        bottomLayer.frame = doubleSidedLayer.bounds
-    }
-    
-    override open func layoutSubviews()
-    {
-        super.layoutSubviews()
-        layoutLayers()
-    }
-    
-    private var _frontImage: UIImage?
-    
     @IBInspectable
     open var frontImage: UIImage?
-        {
-        set { _frontImage = newValue; topLayer.contents = frontImage?.cgImage }
-        get { return _frontImage }
-    }
-    
-    private var _backImage: UIImage?
     
     @IBInspectable
     open var backImage: UIImage?
+    
+    // MARK: - Flip
+    
+    @IBInspectable
+    open var isFlipped: Bool
         {
-        set { _backImage = newValue; bottomLayer.contents = backImage?.cgImage }
-        get { return _backImage }
+        get { return image == backImage }
+        set { image = newValue ? backImage : frontImage }
     }
     
-    // MARK: - 3D rotation
-    
-    open var transform3D: CATransform3D
+    /** flips the card over with no animation
+     */
+    open func flip()
     {
-        get { return doubleSidedLayer.sublayerTransform }
-        set { doubleSidedLayer.sublayerTransform = newValue }
-    }
-
-    open func rotateTo(
-        x: CGFloat = 0,
-        y: CGFloat = 0,
-        z: CGFloat = 0,
-        duration: Double = 0.75,
-        completion: (() -> ())? = nil)
-    {
-        let transform3D = CATransform3DConcat(CATransform3DMakeRotation(x, 1, 0, 0), CATransform3DConcat(CATransform3DMakeRotation(y, 0, 1, 0), CATransform3DMakeRotation(z, 0, 0, 1)))
-
-        CATransaction.setCompletionBlock(completion)
-        
-        CATransaction.begin()
-        
-        CATransaction.setAnimationDuration(duration)
-        CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear))
-        
-        doubleSidedLayer.sublayerTransform = transform3D
-        
-        CATransaction.commit()
+        isFlipped = !isFlipped
     }
     
-    open func rotateBy(
-        dx: CGFloat = 0,
-        dy: CGFloat = 0,
-        dz: CGFloat = 0,
-        duration: Double = 0.75,
-        completion: (() -> ())? = nil)
+    public enum FlipFrom
     {
+        case top, left, right, bottom
         
-        CATransaction.setCompletionBlock(completion)
+        var animationOption: UIViewAnimationOptions
+        {
+            switch self {
+            case .top: return .transitionFlipFromTop
+            case .bottom: return .transitionFlipFromBottom
+            case .left: return .transitionFlipFromLeft
+            case .right: return .transitionFlipFromRight
+            }
+        }
+    }
+    
+    /** flips the card over animated
+     - parameter duration: tim the flip should take
+     */
+    open func flip(duration: Double,
+                   delay: Double = 0,
+                   from: FlipFrom = .bottom,
+                   completion: ((Bool)->())? = nil)
+    {
+        let originalTransform = transform
         
-        CATransaction.begin()
-        CATransaction.setAnimationDuration(duration)
-        CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear))
+        let temporaryTransform = transform.scaledBy(x: 1.1, y: 1.1)
         
-        let m = max(abs(dx), abs(dy), abs(dz))
+        func updateTransform(_ newTransform: CGAffineTransform)
+        {
+            transform = newTransform
+        }
         
-        doubleSidedLayer.sublayerTransform = CATransform3DRotate(doubleSidedLayer.sublayerTransform, m, dx / m, dy / m, dz/m)
-        
-        CATransaction.commit()
+        UIView.animate(
+            withDuration: duration / 5,
+            delay: delay,
+            options: [.curveEaseIn],
+            animations: { updateTransform( temporaryTransform) },
+            completion: { _ in
+                
+                self.superview?.bringSubview(toFront: self)
+                
+                UIView.transition(
+                    with: self,
+                    duration: 3 * duration / 5,
+                    options: [.curveLinear, from.animationOption],
+                    animations: self.flip,
+                    completion: { _ in
+                        
+                        UIView.animate(
+                            withDuration: duration / 5,
+                            delay: 0,
+                            options: [.curveEaseOut, .beginFromCurrentState],
+                            animations: { updateTransform( originalTransform) },
+                            completion: completion)
+                })
+        })
     }
 }

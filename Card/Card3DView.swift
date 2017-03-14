@@ -9,31 +9,13 @@
 import UIKit
 
 @IBDesignable
-open class Card3DView: TwoSidedImageView
+open class Card3DView: TwoSided3DImageView
 {
     // MARK: - Flip
     
     public enum Edge
     {
         case top, bottom, left, right
-        
-//        var animationTransitionOption: UIViewAnimationOptions
-//        {
-//            switch self
-//            {
-//            case .top:
-//                return .transitionEdgeTop
-//                
-//            case .bottom:
-//                return .transitionEdgeBottom
-//                
-//            case .left:
-//                return .transitionEdgeLeft
-//                
-//            case .right:
-//                return .transitionEdgeRight
-//            }
-//        }
         
         var anchorPoint: CGPoint
         {
