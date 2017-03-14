@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s2P-4A-Vyr">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Draw View Controller-->
+        <scene sceneID="vYF-FG-9sV">
+            <objects>
+                <viewController id="s2P-4A-Vyr" customClass="DrawViewController" customModule="CardDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sH7-Gv-vO4"/>
+                        <viewControllerLayoutGuide type="bottom" id="8wp-45-n2s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0XM-RC-fLR">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If8-Cv-b0r">
+                                <rect key="frame" x="91" y="613" width="585" height="390.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfq-TK-XPJ">
+                                <rect key="frame" x="91.5" y="28" width="585" height="390.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xfq-TK-XPJ" secondAttribute="height" multiplier="3:2" id="P9y-uh-a9w"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Va5-du-xyG">
+                                <rect key="frame" x="91.5" y="418.5" width="585" height="195"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlJ-ck-0aD">
+                                        <rect key="frame" x="20" y="82" width="50" height="30"/>
+                                        <state key="normal" title="Shuffle"/>
+                                        <connections>
+                                            <action selector="handleShuffleButton:" destination="s2P-4A-Vyr" eventType="touchUpInside" id="zDN-uh-fRh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut8-Pm-ayK">
+                                        <rect key="frame" x="527" y="82" width="38" height="30"/>
+                                        <state key="normal" title="Undo"/>
+                                        <connections>
+                                            <action selector="handleUndoButton:" destination="s2P-4A-Vyr" eventType="touchUpInside" id="brN-OC-eTF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cN-eR-i8z">
+                                        <rect key="frame" x="274" y="82" width="36" height="30"/>
+                                        <state key="normal" title="Draw"/>
+                                        <connections>
+                                            <action selector="handleDrawButton:" destination="s2P-4A-Vyr" eventType="touchUpInside" id="hRB-vp-yQg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hlJ-ck-0aD" firstAttribute="centerY" secondItem="Va5-du-xyG" secondAttribute="centerY" id="31l-6T-9WN"/>
+                                    <constraint firstItem="Ut8-Pm-ayK" firstAttribute="centerY" secondItem="Va5-du-xyG" secondAttribute="centerY" id="9RM-aj-nDt"/>
+                                    <constraint firstItem="Ut8-Pm-ayK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5cN-eR-i8z" secondAttribute="trailing" constant="8" symbolic="YES" id="Fhs-LR-ZYx"/>
+                                    <constraint firstItem="5cN-eR-i8z" firstAttribute="centerX" secondItem="Va5-du-xyG" secondAttribute="centerX" id="GMZ-8g-cJ6"/>
+                                    <constraint firstItem="5cN-eR-i8z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hlJ-ck-0aD" secondAttribute="trailing" constant="8" symbolic="YES" id="JdF-1Y-teH"/>
+                                    <constraint firstItem="5cN-eR-i8z" firstAttribute="centerY" secondItem="Va5-du-xyG" secondAttribute="centerY" id="Wx5-Wp-Mwa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ut8-Pm-ayK" secondAttribute="trailing" constant="20" symbolic="YES" id="c7g-1P-XnF"/>
+                                    <constraint firstItem="hlJ-ck-0aD" firstAttribute="leading" secondItem="Va5-du-xyG" secondAttribute="leading" constant="20" symbolic="YES" id="euj-n6-1xS"/>
+                                    <constraint firstAttribute="width" secondItem="Va5-du-xyG" secondAttribute="height" multiplier="3:1" id="jnB-s9-uqc"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8m-7t-1GB" customClass="CardView" customModule="Card">
+                                <rect key="frame" x="91" y="28.5" width="585" height="390"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W8m-7t-1GB" secondAttribute="height" multiplier="3:2" id="5Go-A2-eqf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="frontImage" value="Front"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backImage" value="Back"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="If8-Cv-b0r" firstAttribute="top" secondItem="Va5-du-xyG" secondAttribute="bottom" id="4YH-qI-1hY"/>
+                            <constraint firstItem="If8-Cv-b0r" firstAttribute="centerX" secondItem="0XM-RC-fLR" secondAttribute="centerX" id="5m7-aD-p69"/>
+                            <constraint firstItem="xfq-TK-XPJ" firstAttribute="height" secondItem="If8-Cv-b0r" secondAttribute="height" id="7QN-lH-9Kd"/>
+                            <constraint firstItem="xfq-TK-XPJ" firstAttribute="width" secondItem="If8-Cv-b0r" secondAttribute="width" id="Ao0-AC-tfW"/>
+                            <constraint firstItem="W8m-7t-1GB" firstAttribute="centerX" secondItem="0XM-RC-fLR" secondAttribute="centerX" id="PGA-r3-JO0"/>
+                            <constraint firstItem="W8m-7t-1GB" firstAttribute="width" secondItem="xfq-TK-XPJ" secondAttribute="width" id="Rco-VC-8WR"/>
+                            <constraint firstAttribute="bottom" secondItem="If8-Cv-b0r" secondAttribute="bottom" constant="20" symbolic="YES" id="TuJ-Ua-BKI"/>
+                            <constraint firstItem="W8m-7t-1GB" firstAttribute="centerY" secondItem="xfq-TK-XPJ" secondAttribute="centerY" id="hAc-tl-LQq"/>
+                            <constraint firstItem="xfq-TK-XPJ" firstAttribute="trailing" secondItem="Va5-du-xyG" secondAttribute="trailing" id="rMZ-PR-4RC"/>
+                            <constraint firstItem="xfq-TK-XPJ" firstAttribute="leading" secondItem="Va5-du-xyG" secondAttribute="leading" id="t57-z3-28y"/>
+                            <constraint firstItem="xfq-TK-XPJ" firstAttribute="top" secondItem="sH7-Gv-vO4" secondAttribute="bottom" constant="8" symbolic="YES" id="tcj-dz-yls"/>
+                            <constraint firstItem="xfq-TK-XPJ" firstAttribute="centerX" secondItem="0XM-RC-fLR" secondAttribute="centerX" id="xqd-WD-h29"/>
+                            <constraint firstItem="Va5-du-xyG" firstAttribute="top" secondItem="xfq-TK-XPJ" secondAttribute="bottom" id="zmV-lM-Els"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="controls" destination="Va5-du-xyG" id="Kak-kB-MB2"/>
+                        <outlet property="drawButton" destination="5cN-eR-i8z" id="azq-Wz-OvB"/>
+                        <outlet property="pileBaseView" destination="If8-Cv-b0r" id="LE0-gW-0gk"/>
+                        <outlet property="shuffleButton" destination="hlJ-ck-0aD" id="bCk-cm-n6Z"/>
+                        <outlet property="stackBaseView" destination="xfq-TK-XPJ" id="3fc-PR-9gn"/>
+                        <outlet property="templateCardView" destination="W8m-7t-1GB" id="wyj-Os-jPp"/>
+                        <outlet property="undoButton" destination="Ut8-Pm-ayK" id="ubK-Y7-rea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hb8-fq-cNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Back" width="437" height="295"/>
+        <image name="Front" width="437" height="295"/>
+    </resources>
+</document>

@@ -26,7 +26,8 @@ class ViewController: UIViewController
     {
         sender.isEnabled = false
         
-        let edge: UIView.Edge
+        let edge: CardView.Edge
+        
         switch sender
         {
         case topButton:
@@ -46,7 +47,7 @@ class ViewController: UIViewController
         }
         
         cardView.flip(
-            on: edge,
+            from: edge,
             duration: 3,
             completion: { (completed) in
                 sender.isEnabled = true

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAf-ZY-pzb">
-                                <rect key="frame" x="89" y="186" width="196" height="295"/>
+                                <rect key="frame" x="286" y="364.5" width="196" height="295"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVn-u4-8ib" customClass="CardView" customModule="Card">
                                         <rect key="frame" x="0.0" y="82" width="196" height="131"/>
@@ -51,10 +51,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPT-Or-ams">
-                                <rect key="frame" x="285" y="318" width="90" height="30"/>
+                                <rect key="frame" x="482" y="497" width="286" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0b-lC-NOa">
-                                        <rect key="frame" x="27" y="0.0" width="36" height="30"/>
+                                        <rect key="frame" x="125" y="0.0" width="36" height="30"/>
                                         <state key="normal" title="Right"/>
                                         <connections>
                                             <action selector="flip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K4y-Qq-c7o"/>
@@ -70,10 +70,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-TL-j5U">
-                                <rect key="frame" x="172" y="0.0" width="30" height="186"/>
+                                <rect key="frame" x="369" y="0.0" width="30" height="364.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4W-XR-jhf">
-                                        <rect key="frame" x="0.0" y="78" width="30" height="30"/>
+                                        <rect key="frame" x="0.0" y="167.5" width="30" height="30"/>
                                         <state key="normal" title="Top"/>
                                         <connections>
                                             <action selector="flip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EhV-iw-xdB"/>
@@ -89,10 +89,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-iz-Uc0">
-                                <rect key="frame" x="0.0" y="318" width="89" height="30"/>
+                                <rect key="frame" x="0.0" y="497" width="286" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHI-rC-YYM">
-                                        <rect key="frame" x="30" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="128.5" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="Left"/>
                                         <connections>
                                             <action selector="flip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCy-EO-Ouo"/>
@@ -108,10 +108,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daO-jd-0z6">
-                                <rect key="frame" x="162" y="481" width="51" height="186"/>
+                                <rect key="frame" x="358.5" y="659.5" width="51" height="364.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjW-zk-HfM">
-                                        <rect key="frame" x="0.0" y="78" width="51" height="30"/>
+                                        <rect key="frame" x="0.0" y="167.5" width="51" height="30"/>
                                         <state key="normal" title="Bottom"/>
                                         <connections>
                                             <action selector="flip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gUY-TR-yiC"/>

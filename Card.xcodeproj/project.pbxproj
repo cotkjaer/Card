@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F2899CC1E645E090083DFB2 /* Flip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2899CB1E645E090083DFB2 /* Flip.storyboard */; };
+		8F2899CE1E645E1F0083DFB2 /* FlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2899CD1E645E1F0083DFB2 /* FlipViewController.swift */; };
+		8F2899D01E6464C20083DFB2 /* Draw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2899CF1E6464C20083DFB2 /* Draw.storyboard */; };
+		8F2899D21E6464DA0083DFB2 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2899D11E6464DA0083DFB2 /* DrawViewController.swift */; };
+		8F2899D41E6475F90083DFB2 /* TwoSidedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2899D31E6475F80083DFB2 /* TwoSidedImageView.swift */; };
 		8FECC78E1E5D6B2A00F7F771 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECC7841E5D6B2A00F7F771 /* Card.framework */; };
 		8FECC7931E5D6B2A00F7F771 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC7921E5D6B2A00F7F771 /* CardTests.swift */; };
 		8FECC7951E5D6B2A00F7F771 /* Card.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FECC7871E5D6B2A00F7F771 /* Card.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,7 +24,7 @@
 		8FECC7B51E5D6B5C00F7F771 /* Card.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECC7841E5D6B2A00F7F771 /* Card.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FECC8401E6321D100F7F771 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC83F1E6321D100F7F771 /* CardView.swift */; };
 		8FECC8421E63274800F7F771 /* CALayer+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC8411E63274800F7F771 /* CALayer+Anchor.swift */; };
-		8FECC8441E632C5100F7F771 /* UIView+Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC8431E632C5100F7F771 /* UIView+Edge.swift */; };
+		8FECC8461E634B0400F7F771 /* xor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC8451E634B0400F7F771 /* xor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8F2899CB1E645E090083DFB2 /* Flip.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Flip.storyboard; sourceTree = "<group>"; };
+		8F2899CD1E645E1F0083DFB2 /* FlipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipViewController.swift; sourceTree = "<group>"; };
+		8F2899CF1E6464C20083DFB2 /* Draw.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Draw.storyboard; sourceTree = "<group>"; };
+		8F2899D11E6464DA0083DFB2 /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		8F2899D31E6475F80083DFB2 /* TwoSidedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSidedImageView.swift; sourceTree = "<group>"; };
 		8FECC7841E5D6B2A00F7F771 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FECC7871E5D6B2A00F7F771 /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		8FECC7881E5D6B2A00F7F771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,7 +79,7 @@
 		8FECC7B01E5D6B4200F7F771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FECC83F1E6321D100F7F771 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8FECC8411E63274800F7F771 /* CALayer+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Anchor.swift"; sourceTree = "<group>"; };
-		8FECC8431E632C5100F7F771 /* UIView+Edge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Edge.swift"; sourceTree = "<group>"; };
+		8FECC8451E634B0400F7F771 /* xor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +134,10 @@
 			children = (
 				8FECC7871E5D6B2A00F7F771 /* Card.h */,
 				8FECC7881E5D6B2A00F7F771 /* Info.plist */,
-				8FECC8431E632C5100F7F771 /* UIView+Edge.swift */,
 				8FECC83F1E6321D100F7F771 /* CardView.swift */,
+				8F2899D31E6475F80083DFB2 /* TwoSidedImageView.swift */,
 				8FECC8411E63274800F7F771 /* CALayer+Anchor.swift */,
+				8FECC8451E634B0400F7F771 /* xor.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -146,6 +157,10 @@
 				8FECC7A41E5D6B4100F7F771 /* AppDelegate.swift */,
 				8FECC7A61E5D6B4100F7F771 /* ViewController.swift */,
 				8FECC7A81E5D6B4200F7F771 /* Main.storyboard */,
+				8F2899CB1E645E090083DFB2 /* Flip.storyboard */,
+				8F2899CD1E645E1F0083DFB2 /* FlipViewController.swift */,
+				8F2899CF1E6464C20083DFB2 /* Draw.storyboard */,
+				8F2899D11E6464DA0083DFB2 /* DrawViewController.swift */,
 				8FECC7AB1E5D6B4200F7F771 /* Assets.xcassets */,
 				8FECC7AD1E5D6B4200F7F771 /* LaunchScreen.storyboard */,
 				8FECC7B01E5D6B4200F7F771 /* Info.plist */,
@@ -290,7 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FECC7AF1E5D6B4200F7F771 /* LaunchScreen.storyboard in Resources */,
+				8F2899CC1E645E090083DFB2 /* Flip.storyboard in Resources */,
 				8FECC7AC1E5D6B4200F7F771 /* Assets.xcassets in Resources */,
+				8F2899D01E6464C20083DFB2 /* Draw.storyboard in Resources */,
 				8FECC7AA1E5D6B4200F7F771 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,9 +319,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FECC8441E632C5100F7F771 /* UIView+Edge.swift in Sources */,
+				8FECC8461E634B0400F7F771 /* xor.swift in Sources */,
 				8FECC8421E63274800F7F771 /* CALayer+Anchor.swift in Sources */,
 				8FECC8401E6321D100F7F771 /* CardView.swift in Sources */,
+				8F2899D41E6475F90083DFB2 /* TwoSidedImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +338,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2899D21E6464DA0083DFB2 /* DrawViewController.swift in Sources */,
+				8F2899CE1E645E1F0083DFB2 /* FlipViewController.swift in Sources */,
 				8FECC7A71E5D6B4100F7F771 /* ViewController.swift in Sources */,
 				8FECC7A51E5D6B4100F7F771 /* AppDelegate.swift in Sources */,
 			);
@@ -573,6 +593,7 @@
 				8FECC79A1E5D6B2A00F7F771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FECC79B1E5D6B2A00F7F771 /* Build configuration list for PBXNativeTarget "CardTests" */ = {
 			isa = XCConfigurationList;
@@ -581,6 +602,7 @@
 				8FECC79D1E5D6B2A00F7F771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FECC7B11E5D6B4200F7F771 /* Build configuration list for PBXNativeTarget "CardDemo" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +611,7 @@
 				8FECC7B31E5D6B4200F7F771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

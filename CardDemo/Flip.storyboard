@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ph7-UQ-K4z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flip View Controller-->
+        <scene sceneID="zik-0k-6o0">
+            <objects>
+                <viewController id="ph7-UQ-K4z" customClass="FlipViewController" customModule="CardDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vxz-Q6-70W"/>
+                        <viewControllerLayoutGuide type="bottom" id="9zp-fi-II7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2zO-hz-F9G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnK-QH-0Ku" customClass="CardView" customModule="Card">
+                                <rect key="frame" x="112" y="283" width="150" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="puA-nh-vC9"/>
+                                    <constraint firstAttribute="width" secondItem="gnK-QH-0Ku" secondAttribute="height" multiplier="3:2" id="vyk-vC-SNS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="frontImage" value="Front"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backImage" value="Back"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="gnK-QH-0Ku" firstAttribute="centerX" secondItem="2zO-hz-F9G" secondAttribute="centerX" priority="990" id="Rfe-e1-P1J"/>
+                            <constraint firstItem="gnK-QH-0Ku" firstAttribute="centerY" secondItem="2zO-hz-F9G" secondAttribute="centerY" priority="990" id="UUL-pj-hm5"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zYy-He-JWj" appends="YES" id="9HA-fD-qLK"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="gnK-QH-0Ku" id="GoH-0P-iKH"/>
+                        <outlet property="cardViewHorizontalConstraint" destination="Rfe-e1-P1J" id="aYF-NZ-O48"/>
+                        <outlet property="cardViewVerticalConstraint" destination="UUL-pj-hm5" id="eGR-jK-nnf"/>
+                        <outlet property="tapRecognizer" destination="zYy-He-JWj" id="Gj7-Ct-QP4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8a-Lb-WO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zYy-He-JWj">
+                    <connections>
+                        <action selector="handleTap:" destination="ph7-UQ-K4z" id="8z4-XF-F7d"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-410" y="152"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Back" width="437" height="295"/>
+        <image name="Front" width="437" height="295"/>
+    </resources>
+</document>

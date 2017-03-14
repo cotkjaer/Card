@@ -12,6 +12,11 @@ import Foundation
 
 extension CALayer
 {
+    /**
+     Moves the anchor-point without moving the layer
+     - parameter dx: horizontal displacement
+     - parameter dy: vertical displacement
+     */
     func shiftAnchorPoint(byDx dx: CGFloat, dy: CGFloat)
     {
         guard dx != 0 || dy != 0 else { return }
@@ -25,13 +30,21 @@ extension CALayer
             y: position.y + bounds.size.height * dy)
     }
     
+    /**
+     Moves the anchor-point without moving the layer
+     - parameter delta: displacement vector
+     */
     func shiftAnchorPoint(by delta: CGVector)
     {
         shiftAnchorPoint(byDx: delta.dx, dy: delta.dy)
     }
     
-    func shiftAnchorPoint(to newPoint: CGPoint)
+    /**
+     Moves the anchor-point to a new position without moving the layer
+     - parameter newAnchorPoint: the new anchor-point 
+     */
+    func shiftAnchorPoint(to newAnchorPoint: CGPoint)
     {
-        shiftAnchorPoint(byDx: newPoint.x - anchorPoint.x, dy: newPoint.y - anchorPoint.y)
+        shiftAnchorPoint(byDx: newAnchorPoint.x - anchorPoint.x, dy: newAnchorPoint.y - anchorPoint.y)
     }
 }
