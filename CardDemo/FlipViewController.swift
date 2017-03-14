@@ -11,11 +11,11 @@ import Card
 
 class FlipViewController: UIViewController
 {
-    @IBOutlet weak var cardView: CardView?
+    @IBOutlet weak var Card3DView: Card3DView?
     
-    @IBOutlet weak var cardViewVerticalConstraint: NSLayoutConstraint?
+    @IBOutlet weak var Card3DViewVerticalConstraint: NSLayoutConstraint?
     
-    @IBOutlet weak var cardViewHorizontalConstraint: NSLayoutConstraint?
+    @IBOutlet weak var Card3DViewHorizontalConstraint: NSLayoutConstraint?
     
     override func viewDidLoad()
     {
@@ -35,7 +35,7 @@ class FlipViewController: UIViewController
 
     @IBAction func handleTap(_ sender: UITapGestureRecognizer)
     {
-        guard let cardView = cardView else { return }
+        guard let Card3DView = Card3DView else { return }
 
         guard sender.state == .ended else { return }
 
@@ -46,9 +46,9 @@ class FlipViewController: UIViewController
         let duration: Double = 1
         
        
-        let frame = cardView.frame
+        let frame = Card3DView.frame
         
-        let candidates: [(CardView.Edge, CGFloat)] =
+        let candidates: [(Card3DView.Edge, CGFloat)] =
             [(.left, frame.minX - location.x),
              (.right, location.x - frame.maxX),
              (.top, frame.minY - location.y),
@@ -56,18 +56,18 @@ class FlipViewController: UIViewController
         
         let best = candidates.min(by: {$0.1 > $1.1})!
         
-        let edge: CardView.Edge = best.0
+        let edge: Card3DView.Edge = best.0
         
-        cardView.flip(
+        Card3DView.flip(
             from: edge,
             duration: duration,
             completion: {
             sender.isEnabled = true
         })
 
-        cardViewHorizontalConstraint?.constant = location.x - view.bounds.midX
+        Card3DViewHorizontalConstraint?.constant = location.x - view.bounds.midX
         
-        cardViewVerticalConstraint?.constant = location.y - view.bounds.midY
+        Card3DViewVerticalConstraint?.constant = location.y - view.bounds.midY
         
         view.setNeedsLayout()
         

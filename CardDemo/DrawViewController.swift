@@ -13,7 +13,7 @@ let duration: Double = 0.35
 
 class DrawViewController: UIViewController
 {
-    @IBOutlet weak var templateCardView: CardView!
+    @IBOutlet weak var templateCard3DView: Card3DView!
     
     @IBOutlet weak var stackBaseView: UIView!
     
@@ -21,8 +21,8 @@ class DrawViewController: UIViewController
     
     @IBOutlet weak var pileBaseView: UIView!
     
-    var stack: [CardView] = []
-    var pile: [CardView] = []
+    var stack: [Card3DView] = []
+    var pile: [Card3DView] = []
     
     // MARK: - Lifecycle
     
@@ -30,7 +30,7 @@ class DrawViewController: UIViewController
     {
         super.viewWillAppear(animated)
         
-        templateCardView.flip()
+        templateCard3DView.flip()
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -48,18 +48,18 @@ class DrawViewController: UIViewController
     
     func addCard()
     {
-        let cardView = CardView()
-        cardView.frontImage = #imageLiteral(resourceName: "Front")
-        cardView.backImage = #imageLiteral(resourceName: "Back")
+        let card3DView = Card3DView()
+        card3DView.frontImage = #imageLiteral(resourceName: "Front")
+        card3DView.backImage = #imageLiteral(resourceName: "Back")
 
-        cardView.translatesAutoresizingMaskIntoConstraints = false
+        card3DView.translatesAutoresizingMaskIntoConstraints = false
         
-        view.addSubview(cardView)
-        stack.append(cardView)
+        view.addSubview(card3DView)
+        stack.append(card3DView)
         
         view.addConstraints([
             NSLayoutConstraint(
-                item: cardView,
+                item: card3DView,
                 attribute: .centerX,
                 relatedBy: .equal,
                 toItem: view,
@@ -68,7 +68,7 @@ class DrawViewController: UIViewController
                 constant: 0),
         
             NSLayoutConstraint(
-                item: cardView,
+                item: card3DView,
                 attribute: .centerY,
                 relatedBy: .equal,
                 toItem: stackBaseView,
@@ -77,25 +77,25 @@ class DrawViewController: UIViewController
                 constant: 0),
         
             NSLayoutConstraint(
-                item: cardView,
+                item: card3DView,
                 attribute: .height,
                 relatedBy: .equal,
-                toItem: templateCardView,
+                toItem: templateCard3DView,
                 attribute: .height,
                 multiplier: 1,
                 constant: 0),
         
             NSLayoutConstraint(
-                item: cardView,
+                item: card3DView,
                 attribute: .width,
                 relatedBy: .equal,
-                toItem: templateCardView,
+                toItem: templateCard3DView,
                 attribute: .width,
                 multiplier: 1,
                 constant: 0)])
         
         
-        cardView.rotateTo(
+        card3DView.rotateTo(
             x: stackCardRotation.x,
             y: stackCardRotation.y,
             z: stackCardRotation.z,     duration: 0.1) {}
@@ -118,29 +118,29 @@ class DrawViewController: UIViewController
         
         sender.isEnabled = false
         
-        let cardView = stack.removeLast()
-        pile.append(cardView)
+        let Card3DView = stack.removeLast()
+        pile.append(Card3DView)
 
-        view.bringSubview(toFront: cardView)
+        view.bringSubview(toFront: Card3DView)
         
-        cardView.rotateTo(
+        Card3DView.rotateTo(
             x: pileCardRotation.x,
             y: pileCardRotation.y,
             z: pileCardRotation.z,
             duration: duration,
             completion: updateButtons)
 
-        align(cardView: cardView, with: pileBaseView, duration: duration)
+        align(Card3DView: Card3DView, with: pileBaseView, duration: duration)
     }
     
-    func align(cardView: CardView, with baseView: UIView, duration: Double)
+    func align(Card3DView: Card3DView, with baseView: UIView, duration: Double)
     {
-        guard let constraint = cardView.superview?.constraints.first(where: { $0.firstItem === cardView && $0.firstAttribute == .centerY }) else { return }
+        guard let constraint = Card3DView.superview?.constraints.first(where: { $0.firstItem === Card3DView && $0.firstAttribute == .centerY }) else { return }
         
         view.removeConstraint(constraint)
         
         view.addConstraint(NSLayoutConstraint(
-            item: cardView,
+            item: Card3DView,
             attribute: .centerY,
             relatedBy: .equal,
             toItem: baseView,
@@ -148,14 +148,14 @@ class DrawViewController: UIViewController
             multiplier: 1,
             constant: 0))
         
-        cardView.superview?.setNeedsLayout()
+        Card3DView.superview?.setNeedsLayout()
         
         UIView.animate(
             withDuration: duration,
             delay: 0,
             options: [.curveLinear],
             animations: { 
-                cardView.superview?.layoutIfNeeded()
+                Card3DView.superview?.layoutIfNeeded()
         }, completion: nil)
         
     }
@@ -187,19 +187,19 @@ class DrawViewController: UIViewController
     
     func putBack(duration: Double, completion: (() -> ())? = nil)
     {
-        let cardView = pile.removeLast()
-        stack.append(cardView)
+        let Card3DView = pile.removeLast()
+        stack.append(Card3DView)
         
-        view.bringSubview(toFront: cardView)
+        view.bringSubview(toFront: Card3DView)
         
-        cardView.rotateTo(
+        Card3DView.rotateTo(
             x: stackCardRotation.x,
             y: stackCardRotation.y,
             z: stackCardRotation.z,
             duration: duration,
             completion: completion)
         
-        align(cardView: cardView, with: stackBaseView, duration: duration)
+        align(Card3DView: Card3DView, with: stackBaseView, duration: duration)
     }
     
     

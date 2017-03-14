@@ -23,18 +23,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If8-Cv-b0r">
-                                <rect key="frame" x="91" y="613" width="585" height="390.5"/>
+                                <rect key="frame" x="91" y="613" width="585" height="391"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfq-TK-XPJ">
-                                <rect key="frame" x="91.5" y="28" width="585" height="390.5"/>
+                                <rect key="frame" x="92" y="28" width="585" height="391"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xfq-TK-XPJ" secondAttribute="height" multiplier="3:2" id="P9y-uh-a9w"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Va5-du-xyG">
-                                <rect key="frame" x="91.5" y="418.5" width="585" height="195"/>
+                                <rect key="frame" x="92" y="419" width="585" height="195"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlJ-ck-0aD">
                                         <rect key="frame" x="20" y="82" width="50" height="30"/>
@@ -72,8 +72,8 @@
                                     <constraint firstAttribute="width" secondItem="Va5-du-xyG" secondAttribute="height" multiplier="3:1" id="jnB-s9-uqc"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8m-7t-1GB" customClass="CardView" customModule="Card">
-                                <rect key="frame" x="91" y="28.5" width="585" height="390"/>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8m-7t-1GB" customClass="Card3DView" customModule="Card">
+                                <rect key="frame" x="91" y="29" width="585" height="390"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="W8m-7t-1GB" secondAttribute="height" multiplier="3:2" id="5Go-A2-eqf"/>
@@ -107,7 +107,7 @@
                         <outlet property="pileBaseView" destination="If8-Cv-b0r" id="LE0-gW-0gk"/>
                         <outlet property="shuffleButton" destination="hlJ-ck-0aD" id="bCk-cm-n6Z"/>
                         <outlet property="stackBaseView" destination="xfq-TK-XPJ" id="3fc-PR-9gn"/>
-                        <outlet property="templateCardView" destination="W8m-7t-1GB" id="wyj-Os-jPp"/>
+                        <outlet property="templateCard3DView" destination="W8m-7t-1GB" id="wyj-Os-jPp"/>
                         <outlet property="undoButton" destination="Ut8-Pm-ayK" id="ubK-Y7-rea"/>
                     </connections>
                 </viewController>

@@ -11,7 +11,7 @@ import Card
 
 class ViewController: UIViewController
 {
-    @IBOutlet weak var cardView: CardView!
+    @IBOutlet weak var Card3DView: Card3DView!
     
     @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var bottomButton: UIButton!
@@ -26,7 +26,7 @@ class ViewController: UIViewController
     {
         sender.isEnabled = false
         
-        let edge: CardView.Edge
+        let edge: Card3DView.Edge
         
         switch sender
         {
@@ -46,7 +46,7 @@ class ViewController: UIViewController
             edge = .left
         }
         
-        cardView.flip(
+        Card3DView.flip(
             from: edge,
             duration: 3,
             completion: { (completed) in
