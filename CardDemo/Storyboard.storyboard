@@ -32,7 +32,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="frontImage" value="Front"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="backImage" value="Back"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFlipped" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFlipped" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
