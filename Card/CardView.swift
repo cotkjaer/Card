@@ -29,6 +29,9 @@ open class CardView: UIView
         get { return frontImageView.backgroundColor }
         set { frontImageView.backgroundColor = newValue }
     }
+
+    // MARK: Back
+    
     
     private let backImageView = UIImageView(image: nil)
     
@@ -38,6 +41,14 @@ open class CardView: UIView
         get { return backImageView.image }
         set { backImageView.image = newValue }
     }
+    
+    @IBInspectable
+    open var backBackgroundColor: UIColor?
+        {
+        get { return backImageView.backgroundColor }
+        set { backImageView.backgroundColor = newValue }
+    }
+    
     
     // MARK: - Init
     
@@ -119,22 +130,14 @@ open class CardView: UIView
                    from: FlipFrom = .bottom,
                    completion: ((Bool)->())? = nil)
     {
-        let originalTransform = transform
-        
-        let temporaryTransform = transform.scaledBy(x: 1.1, y: 1.1)
-        
-        func updateTransform(_ newTransform: CGAffineTransform)
-        {
-            transform = newTransform
-        }
+        let temporaryTransform = CGAffineTransform.identity.scaledBy(x: 1.1, y: 1.1)
         
         UIView.animate(
             withDuration: duration / 5,
             delay: delay,
             options: [.curveEaseIn],
-            animations: { updateTransform( temporaryTransform) },
+            animations: { self.transform = temporaryTransform },
             completion: { _ in
-                
                 self.superview?.bringSubview(toFront: self)
                 
                 UIView.transition(
@@ -148,7 +151,7 @@ open class CardView: UIView
                             withDuration: duration / 5,
                             delay: 0,
                             options: [.curveEaseOut, .beginFromCurrentState],
-                            animations: { updateTransform( originalTransform) },
+                            animations: { self.transform = .identity },
                             completion: completion)
                 })
         })

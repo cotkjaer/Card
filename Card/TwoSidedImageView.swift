@@ -80,20 +80,11 @@ open class TwoSidedImageView: UIImageView
                    from: FlipFrom = .bottom,
                    completion: ((Bool)->())? = nil)
     {
-        let originalTransform = transform
-        
-        let temporaryTransform = transform.scaledBy(x: 1.1, y: 1.1)
-        
-        func updateTransform(_ newTransform: CGAffineTransform)
-        {
-            transform = newTransform
-        }
-        
         UIView.animate(
             withDuration: duration / 5,
             delay: delay,
             options: [.curveEaseIn],
-            animations: { updateTransform( temporaryTransform) },
+            animations: { self.transform = CGAffineTransform.identity.scaledBy(x: 1.1, y: 1.1) },
             completion: { _ in
                 
                 self.superview?.bringSubview(toFront: self)
@@ -109,7 +100,7 @@ open class TwoSidedImageView: UIImageView
                             withDuration: duration / 5,
                             delay: 0,
                             options: [.curveEaseOut, .beginFromCurrentState],
-                            animations: { updateTransform( originalTransform) },
+                            animations: { self.transform = .identity },
                             completion: completion)
                 })
         })

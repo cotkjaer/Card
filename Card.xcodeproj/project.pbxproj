@@ -16,6 +16,7 @@
 		8F56A9B81E780B7900B1F37C /* TwoSided3DImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56A9B71E780B7900B1F37C /* TwoSided3DImageView.swift */; };
 		8F56A9BA1E780CF500B1F37C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F56A9B91E780CF500B1F37C /* Storyboard.storyboard */; };
 		8F56A9BC1E780D8200B1F37C /* Flip2DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56A9BB1E780D8200B1F37C /* Flip2DViewController.swift */; };
+		8F56A9C21E795A4F00B1F37C /* ThinCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56A9C11E795A4F00B1F37C /* ThinCardView.swift */; };
 		8FECC78E1E5D6B2A00F7F771 /* Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FECC7841E5D6B2A00F7F771 /* Card.framework */; };
 		8FECC7931E5D6B2A00F7F771 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC7921E5D6B2A00F7F771 /* CardTests.swift */; };
 		8FECC7951E5D6B2A00F7F771 /* Card.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FECC7871E5D6B2A00F7F771 /* Card.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -72,6 +73,7 @@
 		8F56A9B71E780B7900B1F37C /* TwoSided3DImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoSided3DImageView.swift; sourceTree = "<group>"; };
 		8F56A9B91E780CF500B1F37C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		8F56A9BB1E780D8200B1F37C /* Flip2DViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flip2DViewController.swift; sourceTree = "<group>"; };
+		8F56A9C11E795A4F00B1F37C /* ThinCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinCardView.swift; sourceTree = "<group>"; };
 		8FECC7841E5D6B2A00F7F771 /* Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FECC7871E5D6B2A00F7F771 /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		8FECC7881E5D6B2A00F7F771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				8FECC7881E5D6B2A00F7F771 /* Info.plist */,
 				8F2899D31E6475F80083DFB2 /* TwoSidedImageView.swift */,
 				8F56A9B51E78092500B1F37C /* CardView.swift */,
+				8F56A9C11E795A4F00B1F37C /* ThinCardView.swift */,
 				8F56A9B71E780B7900B1F37C /* TwoSided3DImageView.swift */,
 				8FECC83F1E6321D100F7F771 /* Card3DView.swift */,
 				8FECC8411E63274800F7F771 /* CALayer+Anchor.swift */,
@@ -335,6 +338,7 @@
 				8FECC8461E634B0400F7F771 /* xor.swift in Sources */,
 				8FECC8421E63274800F7F771 /* CALayer+Anchor.swift in Sources */,
 				8F56A9B81E780B7900B1F37C /* TwoSided3DImageView.swift in Sources */,
+				8F56A9C21E795A4F00B1F37C /* ThinCardView.swift in Sources */,
 				8FECC8401E6321D100F7F771 /* Card3DView.swift in Sources */,
 				8F2899D41E6475F90083DFB2 /* TwoSidedImageView.swift in Sources */,
 				8F56A9B61E78092500B1F37C /* CardView.swift in Sources */,
