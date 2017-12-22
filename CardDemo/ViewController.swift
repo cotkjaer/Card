@@ -49,9 +49,7 @@ class ViewController: UIViewController
         Card3DView.flip(
             from: edge,
             duration: 3,
-            completion: { (completed) in
-                sender.isEnabled = true
-        })
+            completion: { sender.isEnabled = true })
         
     }
 }
